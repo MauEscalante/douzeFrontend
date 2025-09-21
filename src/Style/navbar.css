@@ -1,0 +1,438 @@
+/* Importar fuente estética desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset de márgenes para eliminar espacios en blanco */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 100px;
+    /* Espacio para el navbar fijo */
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.navbar {
+    background: rgb(33, 33, 33);
+    padding: 1.8rem 1rem;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30000;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin: 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para navbar vertical */
+.navbar-vertical {
+    flex-direction: column;
+    padding: 1rem 1rem 0.5rem 1rem;
+    height: auto;
+    min-height: fit-content;
+}
+
+.navbar-top-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.navbar-top-row .navbar-brand {
+    position: absolute;
+    left: 0;
+    top: 10%;
+}
+
+.navbar-bottom-row {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    align-items: flex-end;
+    margin-top: 0.1rem;
+    padding-left: calc(1.6rem + 40px + 0.8rem + 20rem);
+    /* Logo width + gap + brand margin */
+}
+
+.navbar-bottom-row .form-log {
+    gap: 0.8rem;
+    margin: 0;
+}
+
+
+
+.navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navbar-brand {
+    margin-top: -10px;
+    margin-right: auto;
+    margin-left: 5rem;
+}
+
+.navbar-brand:hover {
+    color: #64b5f6;
+    transform: translateY(-1px);
+}
+
+/* Logo del ahorro */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%; 
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+
+
+.form-log {
+    display: flex;
+
+}
+
+/* Quitar subrayado del Link en el botón de login */
+.form-log a {
+    text-decoration: none;
+}
+
+.form-log a:hover {
+    text-decoration: none;
+}
+
+.contenedor-menu-log button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+
+
+
+
+.dropdown-menu .dropdown-item:hover {
+    color: #ffffff;
+    transform: translateX(2px);
+}
+
+.dropdown-menu .dropdown-item:active {
+    transform: translateX(1px);
+}
+
+.opcion-mis-listas {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Centramos el componente de búsqueda */
+.search-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.search-container>* {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilos para el botón de login */
+.login-button,
+.btn.login-button,
+.btn-outline-info.login-button {
+    display: flex !important;
+    padding: 0.3rem 0.2rem !important;
+    background: transparent !important;
+    border: none !important;
+    color: #9b37f8fb !important;
+    font-family: 'Proxima Nova', '-apple-system', 'Roboto', 'Arial', 'sans-serif';
+    letter-spacing: 0.6px;
+    font-size: 0.90rem;
+    font-weight: semibold;
+    transition: all 0.3s ease;
+    box-shadow: none !important;
+}
+
+.user-icon {
+    width: 2rem;
+    height: 2rem;
+    opacity: 1;
+    filter: brightness(0) invert(1);
+}
+
+/* Estilos para la flecha del dropdown */
+.dropdown-arrow {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+/* Rotar la flecha cuando el dropdown está abierto */
+.dropdown-arrow.open {
+    transform: rotate(180deg);
+}
+
+/* Alternativa con una flecha más estilizada */
+.login-button .dropdown-arrow {
+    margin-left: 0.1rem;
+    font-size: 0.70rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+}
+
+.login-button:hover .dropdown-arrow {
+    opacity: 1;
+}
+
+/* Media queries para responsive design */
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 1.6rem 0.9rem;
+    }
+
+    .search-container {
+        margin: 0 1.8rem;
+    }
+
+    .form-log {
+        margin-right: 2.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .search-container {
+        margin: 0 1.5rem;
+    }
+
+    .form-log {
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+
+    .navbar {
+        padding: 1rem 0.5rem;
+        height: auto;
+        min-height: 80px;
+    }
+
+    .navbar .container-fluid {
+        flex-wrap: wrap;
+    }
+
+
+
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    
+
+    .search-container {
+        order: 3;
+        flex: 1 1 100%;
+        width: 100%;
+        margin: 1rem 0 0 0;
+        justify-content: center;
+    }
+
+    .search-container>* {
+        max-width: 100%;
+        width: 90%;
+    }
+
+    .login-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 90px;
+    }
+
+    .navbar {
+        padding: 0.8rem 0.3rem;
+        min-height: 90px;
+    }
+
+    .navbar .container-fluid {
+        flex-wrap: wrap;
+    }
+
+
+
+    .logo-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    
+
+    .form-log {
+        margin-right: 0.5rem;
+        margin-left: 0;
+        order: 2;
+        flex: 0 0 auto;
+    }
+
+    .login-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+        gap: 0.3rem;
+    }
+
+    .user-icon {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .search-container {
+        order: 3;
+        flex: 1 1 100%;
+        width: 100%;
+        margin: 0.8rem 0 0 0;
+        justify-content: center;
+    }
+
+    .search-container>* {
+        max-width: 100%;
+        width: 95%;
+    }
+
+}
+
+/* Estilos del carrito */
+.cart-container {
+    position: absolute;
+    right: 1rem;
+    top: 80%;
+    transform: translateY(-50%);
+}
+
+.cart-button {
+    border: none;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cart-button:hover {
+    transform: scale(1.05);
+    
+}
+
+.cart-icon {
+    font-size: 20px;
+    color: white;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: linear-gradient(135deg, #840bf5 0%, #c006d9 100%);
+    color: white;
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 400;
+    border: none;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+    min-width: 20px;
+}
+
+/* Responsive para el carrito */
+@media (max-width: 991px) {
+    .cart-container {
+        order: 2;
+        position: static;
+        transform: none;
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+
+    .cart-button {
+        width: 45px;
+        height: 45px;
+    }
+
+    .cart-icon {
+        font-size: 18px;
+    }
+}
