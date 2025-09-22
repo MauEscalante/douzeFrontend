@@ -43,6 +43,10 @@ const Navbar = () => {
         navigate("/historial");
     };
 
+    const navigateToRetiro = () => {
+        navigate("/retiro");
+    };
+
     return (
         <nav className="navbar navbar-expand-lg navbar-vertical">
             <div className="container-fluid navbar-top-row">
@@ -79,7 +83,7 @@ const Navbar = () => {
                     <button
                         className="btn btn-outline-info login-button"
                         type="button"
-                        onClick={toggleDropdown}
+                        onClick={navigateToRetiro}
                     >
                         <p>Zonas de retiro</p>
                     </button>

@@ -4,6 +4,7 @@ import Login from "./Components/Login.js";
 import Navbar from "./Components/Navbar.js";
 import Register from "./Components/Register.js";
 import Historial from "./Components/Historial.js";
+import Retiro from "./Components/Retiro.js";
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/historial" element={<Historial />} />
+                <Route path="/retiro" element={<Retiro/>} />
             </Routes>
         </>
     );
