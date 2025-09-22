@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./Components/HomePage";
+import Login from "./Components/Login.js";
 import Navbar from "./Components/Navbar.js";
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
             { <Navbar />}
             <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/login" element={<Login />} />
             </Routes>
         </>
     );
