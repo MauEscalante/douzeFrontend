@@ -1,0 +1,428 @@
+/* Estilos para el componente Retiro */
+
+.retiro-container {
+  min-height: calc(100vh - 100px);
+  background-color: rgb(66, 66, 66);
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.retiro-content {
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgb(66, 66, 66);
+}
+
+.retiro-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.retiro-header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: #9B37F8;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.retiro-header p {
+  font-weight: 400;
+  color: #D3D5D4;
+  font-family: 'Proxima Nova', '-apple-system', 'Roboto', 'Arial', 'sans-serif';
+  font-size: 1.1rem;
+}
+
+.retiro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Opciones de entrega */
+.delivery-options h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #C1CFDA;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.option-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.option-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 2px solid #404040;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.option-card:hover {
+  border-color: #9B37F8;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(155, 55, 248, 0.2);
+}
+
+.option-card.selected {
+  border-color: #9B37F8;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d1a3d 100%);
+  box-shadow: 0 8px 25px rgba(155, 55, 248, 0.3);
+}
+
+.option-card.selected::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #9B37F8, #C77DFF);
+}
+
+.option-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.option-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.option-card p {
+  color: #B0B0B0;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.option-price {
+  display: inline-block;
+  background: #9B37F8;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Puntos de retiro */
+.pickup-points-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #C1CFDA;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.zone-section {
+  margin-bottom: 2.5rem;
+}
+
+.zone-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #9B37F8;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #9B37F8;
+}
+
+.points-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.pickup-point {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 2px solid #404040;
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pickup-point:hover {
+  border-color: #9B37F8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(155, 55, 248, 0.2);
+}
+
+.pickup-point.selected {
+  border-color: #9B37F8;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d1a3d 100%);
+  box-shadow: 0 4px 15px rgba(155, 55, 248, 0.3);
+}
+
+.point-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.point-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 1.1rem;
+}
+
+.point-check {
+  font-size: 1.2rem;
+  color: #9B37F8;
+  font-weight: bold;
+}
+
+.point-address {
+  color: #B0B0B0;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Datos del cliente */
+.customer-data-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #C1CFDA;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #C1CFDA;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  background: #1a1a1a;
+  border: 2px solid #404040;
+  border-radius: 8px;
+  padding: 0.75rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: 'Proxima Nova', '-apple-system', 'Roboto', 'Arial', 'sans-serif';
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #9B37F8;
+  box-shadow: 0 0 0 3px rgba(155, 55, 248, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #666666;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Información adicional */
+.delivery-info h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #C1CFDA;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid #404040;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.info-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.info-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.info-card p {
+  color: #B0B0B0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Botón de envío */
+.submit-button {
+  background: linear-gradient(135deg, #9B37F8 0%, #C77DFF 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  align-self: center;
+  min-width: 200px;
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(155, 55, 248, 0.4);
+}
+
+.submit-button:disabled {
+  background: #404040;
+  color: #666666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .retiro-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .retiro-header h1 {
+    font-size: 2rem;
+  }
+
+  .option-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .points-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .option-card,
+  .pickup-point,
+  .info-card {
+    padding: 1rem;
+  }
+
+  .retiro-form {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .retiro-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .retiro-header p {
+    font-size: 1rem;
+  }
+
+  .option-icon {
+    font-size: 2.5rem;
+  }
+
+  .option-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .zone-title {
+    font-size: 1.1rem;
+  }
+
+  .point-name {
+    font-size: 1rem;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pickup-points-section {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.customer-data-section {
+  animation: fadeIn 0.5s ease-out 0.1s both;
+}
+
+.delivery-info {
+  animation: fadeIn 0.5s ease-out 0.2s both;
+}
