@@ -6,6 +6,7 @@ import Slider from '@mui/material/Slider';
 
 const Home = () => {
     const [loading, setLoading] = useState(true);
+    const [showFilters, setShowFilters] = useState(false);
     const [products, setProducts] = useState([
         // NBA
         {
@@ -202,8 +203,16 @@ const Home = () => {
 
     return (
         <div className="home-layout">
+            {/* Botón para mostrar/ocultar filtros en móvil */}
+            <button 
+                className="mobile-filter-toggle"
+                onClick={() => setShowFilters(!showFilters)}
+            >
+                {showFilters ? '✕ Cerrar Filtros' : '☰ Filtros'}
+            </button>
+
             {/* Banner izquierdo */}
-            <div className="left-options">
+            <div className={`left-options ${showFilters ? 'show-filters' : ''}`}>
                 <div className="banner">
                     <h3 aria-level="3" className="title">Categorías</h3>
                     <ul>
