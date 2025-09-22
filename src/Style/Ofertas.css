@@ -301,14 +301,7 @@
     animation: float 3s ease-in-out infinite;
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-6px);
-    }
-}
+
 
 /* Elementos de precio y stock rediseñados */
 .price-comparison {
@@ -359,16 +352,7 @@
     animation: pulse-warning 2s infinite;
 }
 
-@keyframes pulse-warning {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.05);
-        opacity: 0.9;
-    }
-}
+
 
 /* Banner promocional moderno */
 .promo-banner {
@@ -395,14 +379,7 @@
     animation: move 20s linear infinite;
 }
 
-@keyframes move {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(50px, 50px);
-    }
-}
+
 
 .promo-banner h3 {
     margin: 0 0 0.8rem 0;
@@ -467,209 +444,74 @@
     margin-bottom: 1rem;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+/* RESPONSIVE DESIGN - Ajustes para navbar fijo */
 
-/* Responsive - Diseño adaptativo */
-@media (max-width: 768px) {
-    .ofertas-title {
-        font-size: 2rem;
-    }
-    
-    .ofertas-subtitle {
-        font-size: 1rem;
-    }
-    
-    .filters-container {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0.8rem 1rem;
-        gap: 0.5rem;
-        border-radius: 30px;
-        max-width: 100%;
-    }
-    
-    .filter-group {
-        flex-direction: column;
-        gap: 0.3rem;
-        text-align: center;
-    }
-    
-    .filter-group label {
-        font-size: 0.8rem;
-        line-height: 1;
-    }
-    
-    .filter-select {
-        padding: 0.4rem 0.6rem;
-        font-size: 0.8rem;
-        min-width: 80px;
-        border-radius: 15px;
-    }
-    
-    .ofertas-stats {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .stat-item {
-        padding: 1.5rem 1rem;
-    }
-    
-    .stat-number {
-        font-size: 2rem;
-    }
-    
-    .promo-banner h3 {
-        font-size: 1.8rem;
-    }
-    
-    .promo-banner p {
-        font-size: 1.1rem;
-    }
-    
-    /* Vista normal responsive */
-    .products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
-    
-    /* Grupos responsive */
-    .discount-group {
-        padding: 1rem;
-        border-radius: 16px;
-    }
-    
-    .group-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.8rem;
-        text-align: left;
-        margin-bottom: 1rem;
-        padding-bottom: 0.8rem;
-    }
-    
-    .group-title {
-        font-size: 1.3rem;
-    }
-    
-    .group-count {
-        align-self: flex-end;
-        font-size: 0.75rem;
-        padding: 0.4rem 0.8rem;
-    }
-    
-    /* Vista horizontal optimizada para móvil */
-    .discount-group .oferta-card-wrapper {
-        flex: 0 0 260px;
-        min-width: 260px;
-    }
-    
-    .discount-group .products-grid {
-        gap: 1rem;
-        padding: 0.5rem 0 1rem 0;
-    }
-}
-
-@media (max-width: 480px) {
+/* Mobile - navbar más compacto */
+@media screen and (max-width: 768px) {
     .ofertas-header {
-        padding: 1.5rem 0.8rem;
+        margin-top: 70px; /* Navbar más compacto en mobile */
+        padding: 1.5rem 1rem;
+        height: 120px;
     }
     
     .ofertas-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
     }
     
     .ofertas-subtitle {
-        font-size: 0.9rem;
-    }
-    
-    .filters-container {
-        padding: 0.6rem 0.8rem;
-        border-radius: 20px;
-        gap: 0.3rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .filter-group {
-        gap: 0.2rem;
-        min-width: 90px;
-    }
-    
-    .filter-group label {
-        font-size: 0.75rem;
-    }
-    
-    .filter-select {
-        padding: 0.4rem 0.5rem;
-        font-size: 0.75rem;
-        min-width: 75px;
-        border-radius: 12px;
-    }
-    
-    /* Vista normal en móviles pequeños */
-    .products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 1rem;
-    }
-    
-    .discount-badge {
-        font-size: 0.8rem;
-        padding: 0.5rem 0.8rem;
-        top: -6px;
-        right: -6px;
-    }
-    
-    .price-comparison {
-        padding: 0.6rem 0.8rem;
-        top: 12px;
-        left: 12px;
-        border-radius: 12px;
-    }
-    
-    .stock-warning {
-        padding: 0.4rem 0.8rem;
-        bottom: 12px;
-        left: 12px;
-        font-size: 0.75rem;
-    }
-    
-    /* Vista horizontal más compacta */
-    .discount-group .oferta-card-wrapper {
-        flex: 0 0 260px;
-        min-width: 260px;
-    }
-    
-    .discount-group .products-grid {
-        gap: 1rem;
-    }
-    
-    .group-title {
-        font-size: 1.3rem;
-    }
-    
-    .group-count {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
-    }
-    
-    .promo-banner {
-        padding: 2rem 1rem;
-        border-radius: 16px;
-    }
-    
-    .promo-banner h3 {
-        font-size: 1.6rem;
-    }
-    
-    .promo-banner p {
         font-size: 1rem;
     }
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .ofertas-header {
+        margin-top: 90px;
+        padding: 1.8rem 1rem;
+        height: 135px;
+    }
     
-    .promo-banner small {
-        font-size: 0.9rem;
+    .ofertas-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* Desktop y pantallas grandes */
+@media screen and (min-width: 1025px) {
+    .ofertas-header {
+        margin-top: 100px;
+        padding: 2rem 1rem;
+    }
+    
+    .ofertas-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Full Screen y pantallas extra grandes */
+@media screen and (min-width: 1440px) {
+    .ofertas-header {
+        margin-top: 10px; /* Más cerca del navbar en pantallas grandes */
+        padding: 2.5rem 2rem;
+    }
+    
+    .ofertas-title {
+        font-size: 2.8rem;
+    }
+    
+    .ofertas-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ultra Wide y pantallas 4K */
+@media screen and (min-width: 1920px) {
+    .ofertas-header {
+        padding: 3rem 2rem;
+    }
+    
+    .ofertas-title {
+        font-size: 3rem;
     }
 }
