@@ -12,7 +12,7 @@
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #F3F7F0;
+    color: #D3D5D4;
     font-family: 'Proxima Nova', '-apple-system', 'Roboto', 'Arial', 'sans-serif';
 }
 
@@ -32,7 +32,7 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 8px;
-    color: #F3F7F0;
+    color: #D3D5D4;
     height: 30px;
     font-family: 'Proxima Nova', '-apple-system', 'Roboto', 'Arial', 'sans-serif';
 }
