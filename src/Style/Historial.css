@@ -1,0 +1,90 @@
+.historial-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 20px;
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'Proxima Nova', '-apple-system', 'Roboto', 'Arial', 'sans-serif';
+}
+
+.historial-container .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #F3F7F0;
+    font-family: 'Proxima Nova', '-apple-system', 'Roboto', 'Arial', 'sans-serif';
+}
+
+.compra-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.compra-info {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    color: #F3F7F0;
+    height: 30px;
+    font-family: 'Proxima Nova', '-apple-system', 'Roboto', 'Arial', 'sans-serif';
+}
+
+.compra-id {
+    grid-column-start: 2;
+}
+
+.compra-fecha {
+    grid-column-start: 3;
+}
+
+.compra-detalles {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #333;
+}
+
+.producto-item {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    align-items: center;
+    font-size: 18px;
+    color: #9b37f8fb;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+    letter-spacing: 0.2px;
+}
+
+.producto-imagen {
+    display: flex;
+    justify-content: center;
+}
+
+.imagen {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+
+
+.producto-cantidad {
+    grid-column-start: 4;
+}
+
+.producto-info {
+    grid-column-start: 5;
+}

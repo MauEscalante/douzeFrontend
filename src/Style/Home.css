@@ -302,12 +302,12 @@ body {
   display: block;
   font-size: 15px;
   font-weight: 500;
-  color: #a8a8a8;
+  color: #C1CFDA;
   
 }
 
 .left-options ul li:hover .custom-form-label {
-  color: #a8a8a880;
+  color: #c1cfdaad;
 }
 
 /* Responsive design */

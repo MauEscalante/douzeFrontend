@@ -29,9 +29,7 @@ const Navbar = () => {
 
     };
 
-    const toggleCategoryDropdown = () => {
-        setCategoryDropdown(!categoryDropDown);
-    };
+    
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
@@ -39,6 +37,10 @@ const Navbar = () => {
 
     const handleProfileClick = () => {
         setIsDropdownOpen(false);
+    };
+
+    const navigateToHistory = () => {
+        navigate("/historial");
     };
 
     return (
@@ -84,7 +86,7 @@ const Navbar = () => {
                      <button
                         className="btn btn-outline-info login-button"
                         type="button"
-                        onClick={toggleDropdown}
+                        onClick={navigateToHistory}
                     >
                         <p>Historial</p>
                     </button>
