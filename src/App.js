@@ -6,7 +6,7 @@ import Register from "./Components/Register.js";
 import Historial from "./Components/Historial.js";
 import Retiro from "./Components/Retiro.js";
 import Ofertas from "./Components/Ofertas.js";
-import Contacto from "./Components/Contacto.js";
+import Footer from "./Commons/Footer.js";                            
 
 const App = () => {
     return (
@@ -19,8 +19,8 @@ const App = () => {
                 <Route path="/historial" element={<Historial />} />
                 <Route path="/retiro" element={<Retiro/>} />
                 <Route path="/ofertas" element={<Ofertas/>} />
-                <Route path="/contacto" element={<Contacto />} />
             </Routes>
+            <Footer />
         </>
     );
 };
