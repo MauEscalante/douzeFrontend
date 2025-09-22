@@ -1,7 +1,10 @@
 import { Skeleton } from '@mui/material';
 import "../Style/Historial.css";
+import { useState } from 'react';
 
 const Historial = () => {
+
+    const [loading, setLoading] = useState(false);
 
     const compras = [
         {
@@ -55,7 +58,38 @@ const Historial = () => {
     return (
         <div className="historial-container">
             <h3 className='title'>Historial de Compras</h3>
-            {compras.length === 0 ? (
+            {loading ? (
+                // Skeleton loading state
+                <div className="skeleton-container">
+                    {[...Array(3)].map((_, index) => (
+                        <div key={index} className="compra-item">
+                            <div className="compra-header">
+                                <div className="compra-info">
+                                    <Skeleton variant="text" width="150px" height={20} />
+                                    <Skeleton variant="text" width="120px" height={20} />
+                                </div>
+                            </div>
+                            <div className="compra-detalles">
+                                <div className="producto-item">
+                                    <div className='producto-imagen'>
+                                        <Skeleton variant="rectangular" width={100} height={100} />
+                                    </div>
+                                    <div className="producto-nombre">
+                                        <Skeleton variant="text" width="200px" height={30} />
+                                    </div>
+                                    <div className="producto-cantidad">
+                                        <Skeleton variant="text" width="80px" height={30} />
+                                    </div>
+                                    <div className="producto-info">
+                                        <Skeleton variant="text" width="120px" height={30} />
+                                        <Skeleton variant="text" width="100px" height={30} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            ) : compras.length === 0 ? (
                 <div className="no-compras">
                     <p>No hay compras en el historial</p>
                 </div>
