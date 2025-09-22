@@ -8,7 +8,6 @@ import douze from "../assets/douze.png";
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const [categoryDropDown, setCategoryDropdown] = useState(false);
     const navigate = useNavigate();
     const [user, setUser] = useState(null);
     const categories = [
@@ -49,6 +48,10 @@ const Navbar = () => {
 
     const navigateToOfertas = () => {
         navigate("/ofertas");
+    }
+
+    const navigateToContacto = () => {
+        navigate("/contacto");
     }
 
     return (
@@ -139,6 +142,13 @@ const Navbar = () => {
                             </Link>
                         </>
                     )}
+                    <button
+                        className="btn btn-outline-info login-button"
+                        type="button"
+                        onClick={navigateToContacto}
+                    >
+                        <p>Contacto</p>
+                    </button>
                 </form>
             </div>
 
