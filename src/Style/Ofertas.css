@@ -176,6 +176,7 @@
 /* Vista normal (grid estándar) */
 .products-grid {
     display: grid;
+    margin: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
     padding: 1rem 0;
