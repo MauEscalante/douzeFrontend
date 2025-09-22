@@ -47,6 +47,10 @@ const Navbar = () => {
         navigate("/retiro");
     };
 
+    const navigateToOfertas = () => {
+        navigate("/ofertas");
+    }
+
     return (
         <nav className="navbar navbar-expand-lg navbar-vertical">
             <div className="container-fluid navbar-top-row">
@@ -76,7 +80,7 @@ const Navbar = () => {
                     <button
                         className="btn btn-outline-info login-button"
                         type="button"
-                        onClick={toggleDropdown}
+                        onClick={navigateToOfertas}
                     >
                         <p>Ofertas</p>
                     </button>
