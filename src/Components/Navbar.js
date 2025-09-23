@@ -142,13 +142,7 @@ const Navbar = () => {
                             </Link>
                         </>
                     )}
-                    <button
-                        className="btn btn-outline-info login-button"
-                        type="button"
-                        onClick={navigateToContacto}
-                    >
-                        <p>Contacto</p>
-                    </button>
+                    
                 </form>
             </div>
 

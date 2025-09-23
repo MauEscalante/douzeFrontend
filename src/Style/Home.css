@@ -303,7 +303,7 @@ body {
 @media (max-width: 768px) {
   body {
     padding-bottom: 1rem !important;
-    padding-top: 200px !important;
+    padding-top: 170px !important; /*QUEDA ASI*/
     /* Más espacio para navbar vertical en móvil */
   }
 
@@ -400,8 +400,7 @@ body {
 /* Pantallas muy pequeñas (hasta 480px) */
 @media (max-width: 480px) {
   body {
-    padding-top: 250px !important;
-    /* Ajuste para navbar compacto en móviles muy pequeños */
+    padding-top: 140px !important; /* QUEDA ASI*/
   }
 
   .home-layout {
@@ -434,17 +433,33 @@ body {
   }
 }
 
+@media (max-width: 375px) {
+  body {
+    padding-top: 180px !important; /* Ajuste específico para iPhone SE */
+  }
+}
+
+@media (min-width: 376px) and (max-width: 390px) {
+  body {
+    padding-top: 180px !important; /* Ajuste específico para iPhone 12 Pro */
+  }
+}
+@media (min-width: 391px) and (max-width: 400px) {
+  body {
+    padding-top: 160px !important; /* Ajuste específico para Redmi Note 13 */
+  }
+}
+
+
 /* Tablets - Pantallas medianas (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   body {
-    padding-top: 180px !important;
-    /* Ajuste para navbar en modo vertical en tablets */
+    padding-top: 120px !important;
   }
 
   .home-layout {
     gap: 0.75rem;
     margin-top: 2rem !important;
-    /* Margen adicional para tablets */
   }
 
   .left-options {
@@ -467,34 +482,38 @@ body {
 /* Breakpoint específico para navbar vertical (769px - 900px) */
 @media (min-width: 769px) and (max-width: 900px) {
   body {
-    padding-top: 240px !important;
+    padding-top: 130px !important;
     /* Más espacio cuando navbar está en modo vertical */
   }
 }
 
-/* Pantallas grandes (1025px - 1440px) */
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (max-width: 1280px) {
+  body {
+    padding-top: 170px !important;
+  }
+
   .home-layout {
-    max-width: 1200px;
+    gap: 1rem;
+    margin-top: 2rem !important;
+  }
+
+  .left-options {
+    width: 220px;
+    padding: 0.85rem;
+  }
+
+  .left-options h3.title {
+    font-size: 1.05rem;
+    margin-top: 22px;
   }
 
   .contenedor-populars {
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 1.25rem;
+    padding: 1rem;
   }
 }
 
-/* Pantallas extra grandes (más de 1440px) */
-@media (min-width: 1441px) {
-  .home-layout {
-    max-width: 1600px;
-  }
-
-  .contenedor-populars {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-}
 
 /* ========================================
    ANIMATIONS

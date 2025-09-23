@@ -293,7 +293,7 @@ body {
         min-height: fit-content;
     }
 
-    /* Primera fila: Logo a la izquierda, carrito a la derecha, a la misma altura */
+    /* Primera fila: Logo a la izquierda, Search en el medio, carrito a la derecha */
     .navbar-top-row {
         display: flex;
         align-items: center;
@@ -301,7 +301,8 @@ body {
         justify-content: space-between;
         margin-bottom: 1rem;
         position: relative;
-        flex-wrap: nowrap; /* Mantener logo y carrito en la misma línea */
+        flex-wrap: nowrap;
+        gap: 1rem; /* Espacio entre elementos */
     }
 
     .navbar-top-row .navbar-brand {
@@ -319,31 +320,32 @@ body {
         margin-left: 0;
     }
 
-    /* Carrito posicionado arriba a la derecha, a la misma altura del logo */
+    /* Search en el medio con flex-grow para ocupar el espacio disponible */
+    .search-container {
+        order: 2;
+        flex: 1;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 0; /* Permite que se comprima si es necesario */
+    }
+
+    .search-container > * {
+        width: 100%;
+        max-width: 300px; /* Reducir el max-width para que quepa mejor */
+    }
+
+    /* Carrito a la derecha */
     .cart-container {
         position: static;
         right: auto;
         top: auto;
         transform: none;
-        order: 2;
+        order: 3;
         flex: 0 0 auto;
         display: flex;
         align-items: center;
-    }
-
-    /* El search toma toda la fila siguiente */
-    .search-container {
-        width: 100%;
-        margin: 1rem 0;
-        order: 3;
-        flex: 1 1 100%;
-        /* Crear nueva fila para el search */
-        flex-basis: 100%;
-    }
-
-    /* Reorganizar la estructura para que search esté en su propia fila */
-    .navbar-top-row {
-        flex-wrap: wrap;
     }
 
     /* Ajustar la fila inferior de botones */
@@ -372,6 +374,7 @@ body {
     }
 }
 
+
 @media screen and (max-width: 600px) {
     /* Para pantallas muy pequeñas, ajustar más el espaciado */
     .navbar {
@@ -380,10 +383,11 @@ body {
 
     .navbar-top-row {
         margin-bottom: 0.8rem;
+        gap: 0.5rem; /* Reducir gap en pantallas pequeñas */
     }
 
-    .search-container {
-        margin: 0.8rem 0;
+    .search-container > * {
+        max-width: 200px; /* Reducir aún más para pantallas pequeñas */
     }
 
     .login-button,
@@ -404,4 +408,5 @@ body {
         height: 70px;
     }
 }
+
 

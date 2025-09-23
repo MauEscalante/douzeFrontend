@@ -248,12 +248,7 @@ const Ofertas = () => {
                 </div>
             )}
 
-            {/* Banner promocional */}
-            <div className="promo-banner">
-                <h3>🎉 ¡Ofertas por tiempo limitado! 🎉</h3>
-                <p>Aprovecha estos descuentos especiales antes de que se agoten.</p>
-                <small>* Válido hasta agotar stock. Precios sujetos a cambios sin previo aviso.</small>
-            </div>
+            
         </div>
     );
 };
