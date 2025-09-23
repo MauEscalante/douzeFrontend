@@ -2,7 +2,8 @@
 body {
   background-color: rgb(66, 66, 66);
   padding-bottom: 3em;
-  padding-top: 100px !important; /* Mantener espacio para navbar fijo - forzar prioridad */
+  padding-top: 120px !important;
+  /* Mantener espacio para navbar fijo - forzar prioridad */
 }
 
 .main-content {
@@ -18,7 +19,8 @@ body {
   margin: 0 auto;
   gap: 1rem;
   padding: 0 1rem;
-  margin-top: 2rem; /* Margen adicional como respaldo */
+  margin-top: 2rem;
+  /* Margen adicional como respaldo */
 }
 
 /* Contenedor principal */
@@ -185,11 +187,16 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-bottom: 1rem !important;
+    padding-top: 220px !important;
+  }
+
   .loading-indicator {
     padding: 1rem;
     gap: 0.5rem;
   }
-  
+
   .loading-indicator p {
     font-size: 0.9rem;
   }
@@ -280,9 +287,12 @@ body {
   width: auto;
   max-width: 200px;
   position: relative;
-  z-index: 30001; /* Z-index mayor que el navbar */
-  margin-top: 1rem; /* Espacio adicional para evitar que se tape */
-  margin-left: auto; /* Empuja el botón hacia la derecha */
+  z-index: 30001;
+  /* Z-index mayor que el navbar */
+  margin-top: 1rem;
+  /* Espacio adicional para evitar que se tape */
+  margin-left: auto;
+  /* Empuja el botón hacia la derecha */
 }
 
 .mobile-filter-toggle:hover {
@@ -293,7 +303,8 @@ body {
 @media (max-width: 768px) {
   body {
     padding-bottom: 1rem !important;
-    padding-top: 200px !important; /* Más espacio para navbar vertical en móvil */
+    padding-top: 170px !important; /*QUEDA ASI*/
+    /* Más espacio para navbar vertical en móvil */
   }
 
   .mobile-filter-toggle {
@@ -301,8 +312,10 @@ body {
     position: relative !important;
     margin-top: 0rem !important;
     margin-bottom: 1rem !important;
-    z-index: 3000 !important; /* Z-index mayor que el navbar (30000) */
-    margin-left: auto !important; /* Alineación a la derecha en móvil */
+    z-index: 3000 !important;
+    /* Z-index mayor que el navbar (30000) */
+    margin-left: auto !important;
+    /* Alineación a la derecha en móvil */
     margin-right: 0 !important;
     width: auto !important;
   }
@@ -311,7 +324,8 @@ body {
     flex-direction: column;
     gap: 0;
     padding: 0 0.5rem;
-    margin-top: 3rem !important; /* Más margen para móvil */
+    margin-top: 3rem !important;
+    /* Más margen para móvil */
   }
 
   .left-options {
@@ -386,7 +400,7 @@ body {
 /* Pantallas muy pequeñas (hasta 480px) */
 @media (max-width: 480px) {
   body {
-    padding-top: 180px !important; /* Ajuste para navbar compacto en móviles muy pequeños */
+    padding-top: 140px !important; /* QUEDA ASI*/
   }
 
   .home-layout {
@@ -402,8 +416,10 @@ body {
   .mobile-filter-toggle {
     font-size: 0.8rem;
     padding: 0.5rem 0.75rem;
-    margin-top: 2rem; /* Más margen superior para pantallas muy pequeñas */
-    margin-left: auto !important; /* Alineación a la derecha en pantallas pequeñas */
+    margin-top: 2rem;
+    /* Más margen superior para pantallas muy pequeñas */
+    margin-left: auto !important;
+    /* Alineación a la derecha en pantallas pequeñas */
     margin-right: 0 !important;
     width: auto !important;
   }
@@ -417,15 +433,33 @@ body {
   }
 }
 
+@media (max-width: 375px) {
+  body {
+    padding-top: 180px !important; /* Ajuste específico para iPhone SE */
+  }
+}
+
+@media (min-width: 376px) and (max-width: 390px) {
+  body {
+    padding-top: 180px !important; /* Ajuste específico para iPhone 12 Pro */
+  }
+}
+@media (min-width: 391px) and (max-width: 400px) {
+  body {
+    padding-top: 160px !important; /* Ajuste específico para Redmi Note 13 */
+  }
+}
+
+
 /* Tablets - Pantallas medianas (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   body {
-    padding-top: 160px !important; /* Ajuste para navbar en modo vertical en tablets */
+    padding-top: 120px !important;
   }
 
   .home-layout {
     gap: 0.75rem;
-    margin-top: 2rem !important; /* Margen adicional para tablets */
+    margin-top: 2rem !important;
   }
 
   .left-options {
@@ -448,33 +482,38 @@ body {
 /* Breakpoint específico para navbar vertical (769px - 900px) */
 @media (min-width: 769px) and (max-width: 900px) {
   body {
-    padding-top: 180px !important; /* Más espacio cuando navbar está en modo vertical */
+    padding-top: 130px !important;
+    /* Más espacio cuando navbar está en modo vertical */
   }
 }
 
-/* Pantallas grandes (1025px - 1440px) */
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (max-width: 1280px) {
+  body {
+    padding-top: 170px !important;
+  }
+
   .home-layout {
-    max-width: 1200px;
+    gap: 1rem;
+    margin-top: 2rem !important;
+  }
+
+  .left-options {
+    width: 220px;
+    padding: 0.85rem;
+  }
+
+  .left-options h3.title {
+    font-size: 1.05rem;
+    margin-top: 22px;
   }
 
   .contenedor-populars {
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 1.25rem;
+    padding: 1rem;
   }
 }
 
-/* Pantallas extra grandes (más de 1440px) */
-@media (min-width: 1441px) {
-  .home-layout {
-    max-width: 1600px;
-  }
-
-  .contenedor-populars {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-}
 
 /* ========================================
    ANIMATIONS
@@ -484,15 +523,19 @@ body {
   0% {
     background-position: -200% 0;
   }
+
   100% {
     background-position: 200% 0;
   }
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
@@ -502,8 +545,8 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
-
