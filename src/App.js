@@ -6,7 +6,8 @@ import Register from "./Components/Register.js";
 import Historial from "./Components/Historial.js";
 import Retiro from "./Components/Retiro.js";
 import Ofertas from "./Components/Ofertas.js";
-import Footer from "./Commons/Footer.js";                            
+import Footer from "./Commons/Footer.js";        
+import Carrito from "./Components/Carrito.js";                    
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
                 <Route path="/historial" element={<Historial />} />
                 <Route path="/retiro" element={<Retiro/>} />
                 <Route path="/ofertas" element={<Ofertas/>} />
+                <Route path="/carrito" element={<Carrito/>} />
             </Routes>
             <Footer />
         </>
